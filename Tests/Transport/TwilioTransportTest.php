@@ -117,9 +117,9 @@ final class TwilioTransportTest extends TestCase
             "\n",
             PHP_EOL,
             <<<'EOF'
-Unable to send an SMS for recipients:
-- +2000: [HTTP 401] Unable to create record: ERROR MESSAGE (20404)
-EOF
+                Unable to send an SMS for recipients:
+                - +2000: [HTTP 401] Unable to create record: ERROR MESSAGE (20404)
+                EOF
         ));
 
         $message = new Sms();

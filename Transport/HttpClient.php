@@ -28,8 +28,6 @@ class HttpClient implements Client
 
     /**
      * Constructor.@.
-     *
-     * @param HttpClientInterface $client
      */
     public function __construct(HttpClientInterface $client)
     {
@@ -47,8 +45,6 @@ class HttpClient implements Client
      * @param null|int    $timeout
      *
      * @throws \ErrorException
-     *
-     * @return Response
      */
     public function request(
         $method,

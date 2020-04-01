@@ -36,13 +36,8 @@ class TwilioTransport extends AbstractApiTransport
     /**
      * Constructor.
      *
-     * @param string                        $username
-     * @param string                        $password
-     * @param null|string                   $accountSid Account Sid to authenticate with, defaults to $username
-     * @param null|string                   $region     Region to send requests to, defaults to no region selection
-     * @param null|EventDispatcherInterface $dispatcher
-     * @param null|HttpClientInterface      $client
-     * @param null|LoggerInterface          $logger
+     * @param null|string $accountSid Account Sid to authenticate with, defaults to $username
+     * @param null|string $region     Region to send requests to, defaults to no region selection
      *
      * @throws
      */
