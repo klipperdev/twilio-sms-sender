@@ -11,8 +11,8 @@
 
 namespace Klipper\Bridge\SmsSender\Twilio\Transport;
 
+use Klipper\Component\SmsSender\Envelope;
 use Klipper\Component\SmsSender\Mime\Sms;
-use Klipper\Component\SmsSender\SmsEnvelope;
 use Klipper\Component\SmsSender\Transport\AbstractApiTransport;
 use Klipper\Component\SmsSender\Transport\ErrorResult;
 use Klipper\Component\SmsSender\Transport\Result;
@@ -74,7 +74,7 @@ class TwilioTransport extends AbstractApiTransport
         );
     }
 
-    protected function doSendSms(Sms $sms, SmsEnvelope $envelope, Result $result): void
+    protected function doSendSms(Sms $sms, Envelope $envelope, Result $result): void
     {
         $options = [
             'body' => $sms->getText(),
