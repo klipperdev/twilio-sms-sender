@@ -19,7 +19,7 @@
         "klipper/sms-sender": "^2.0.0"
     },
     "require-dev": {
-        "symfony/http-client": "^4.4.0"
+        "symfony/http-client": "^5.1.0"
     },
     "autoload": {
         "psr-4": { "Klipper\\Bridge\\SmsSender\\Twilio\\": "" },
