@@ -21,14 +21,8 @@ use Twilio\Http\Response;
  */
 class HttpClient implements Client
 {
-    /**
-     * @var HttpClientInterface
-     */
-    private $client;
+    private HttpClientInterface $client;
 
-    /**
-     * Constructor.@.
-     */
     public function __construct(HttpClientInterface $client)
     {
         $this->client = $client;

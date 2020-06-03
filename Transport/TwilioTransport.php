@@ -28,14 +28,9 @@ use Twilio\Rest\Client;
  */
 class TwilioTransport extends AbstractApiTransport
 {
-    /**
-     * @var Client
-     */
-    private $twilio;
+    private Client $twilio;
 
     /**
-     * Constructor.
-     *
      * @param null|string $accountSid Account Sid to authenticate with, defaults to $username
      * @param null|string $region     Region to send requests to, defaults to no region selection
      *
@@ -44,11 +39,11 @@ class TwilioTransport extends AbstractApiTransport
     public function __construct(
         string $username,
         string $password,
-        $accountSid = null,
-        $region = null,
-        EventDispatcherInterface $dispatcher = null,
-        HttpClientInterface $client = null,
-        LoggerInterface $logger = null
+        ?string $accountSid = null,
+        ?string $region = null,
+        ?EventDispatcherInterface $dispatcher = null,
+        ?HttpClientInterface $client = null,
+        ?LoggerInterface $logger = null
     ) {
         parent::__construct($client, $dispatcher, $logger);
 
@@ -61,9 +56,6 @@ class TwilioTransport extends AbstractApiTransport
         );
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getName(): string
     {
         return sprintf(

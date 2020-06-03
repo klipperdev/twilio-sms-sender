@@ -21,9 +21,6 @@ use Klipper\Component\SmsSender\Transport\TransportInterface;
  */
 class TwilioTransportFactory extends AbstractTransportFactory
 {
-    /**
-     * {@inheritdoc}
-     */
     public function create(Dsn $dsn): TransportInterface
     {
         $scheme = $dsn->getScheme();
@@ -43,9 +40,6 @@ class TwilioTransportFactory extends AbstractTransportFactory
         throw new UnsupportedSchemeException($dsn, ['api']);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function supports(Dsn $dsn): bool
     {
         return 'twilio' === $dsn->getHost();
