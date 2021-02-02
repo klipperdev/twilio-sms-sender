@@ -14,7 +14,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4.0",
+        "php": "^7.4.0|^8.0.0",
         "twilio/sdk": "^5.9.0",
         "klipper/sms-sender": "^2.0.0"
     },
